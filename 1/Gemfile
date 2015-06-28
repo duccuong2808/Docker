@@ -1,0 +1,249 @@
+# encoding: utf-8
+source 'https://rubygems.org'
+
+# Postgresql
+gem 'pg'
+gem 'pghero'
+# Full-text search support
+# gem 'pg_search'
+
+gem 'ransack'
+# For API
+gem 'grape'
+gem 'grape-entity'
+# Gem Gibbon is an API wrapper for MailChimp's
+gem 'gibbon'
+
+#Haml
+gem 'haml'
+
+# Cache
+gem 'garner'
+gem 'grape-rails-cache'
+
+# Redis
+gem 'hiredis'
+gem 'redis'
+gem 'redis-rails'
+
+#Truncte Text
+gem "truncate_html"
+
+# Background processing
+gem 'sidekiq'
+gem 'sinatra', '>= 1.3.0', :require => nil
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 4.1.8'
+
+# rails_config
+gem "rails_config"
+
+# Use SCSS for stylesheets
+# gem 'sass-rails', '~> 4.0.2'
+gem 'sass'
+gem 'susy'
+gem 'breakpoint'
+
+ # Use Uglifier as compressor for JavaScript assets
+gem 'uglifier'
+
+# Use CoffeeScript for .js.coffee assets and views
+gem 'coffee-rails'
+
+gem 'newrelic_rpm'
+
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', platforms: :ruby
+
+# Use jquery as the JavaScript library
+gem 'jquery-rails'
+gem "jquery-ui-rails"
+
+# Integrate Matias Meno's Dropzone awesome file upload JS library right into the Asset pipeline of your Rails apps.
+gem 'dropzonejs-rails'
+
+gem 'simple_form'
+
+# Parsley.js is an awesome form validation library
+gem 'parsley-rails'
+
+
+# using instance impressionist gem to statics page views
+gem 'ahoy_matey'
+
+gem 'typeahead-rails'
+
+# # use select2 bootstrap
+# gem 'select2-rails'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+# gem 'turbolinks'
+
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder'
+
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# # get your Rails variables in your js
+gem 'gon'
+
+# Authentication and authorization
+gem 'devise'
+gem 'devise-async'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'cancancan'
+
+# Navigation
+gem "breadcrumbs_on_rails"
+
+# Pagination
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+gem 'api-pagination'
+gem 'kaminari'
+
+#tagging
+# gem 'acts-as-taggable-on'
+
+# create URL-friendly use friendly_id
+gem 'friendly_id'
+
+# Web assets
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+
+# Localization
+gem 'rails-i18n'
+gem 'i18n-js', github: 'fnando/i18n-js', branch: 'master'
+
+# Client site routes
+gem 'js-routes'
+
+# Enum
+gem 'enumerize'
+
+# Image upload
+gem 'paperclip'
+
+# Open redirection uri
+gem 'open_uri_redirections'
+
+# ElasticSearch
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+
+# Performance boosting
+gem 'escape_utils'
+gem 'fast_blank'
+gem 'oj'
+gem 'oj_mimic_json'
+
+gem 'money-rails'
+
+# Google map
+gem "geocoder"
+gem 'gmaps4rails'
+
+# Google Analytic
+gem 'google-analytics-rails'
+
+# Static Pages
+gem 'high_voltage'
+
+# Cronjobs
+gem 'whenever'
+
+# Chartkick
+gem "chartkick"
+
+# Model
+# gem 'rack-cors', :require => 'rack/cors'
+
+# API
+# gem 'active_model_serializers'
+
+# Profiling
+# gem 'rack-mini-profiler', require: false
+# gem 'flamegraph'
+
+group :doc do
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
+end
+
+group :production, :staging do
+  gem 'unicorn'
+  gem 'zopim_rails', '~> 0.0.2'
+end
+
+group :development, :test do
+  gem 'thin'
+  gem 'spring'
+  gem 'spring-commands-rspec'
+  gem 'guard-rubocop'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'childprocess'
+  gem 'factory_girl_rails'
+  gem 'web-console'
+  # For rails_panel
+  # gem 'meta_request'
+  # gem 'rack-insight'
+
+  # For generate fake data
+  gem 'faker'
+
+  # Rails ERD - Generate Entity-Relationship Diagrams for Rails applications
+  gem 'rails-erd'
+
+  # For pry
+  gem 'hirb'
+  gem 'pry-rails'
+  gem 'awesome_print'
+  gem 'sketches'
+  gem 'pry-byebug', github: 'deivid-rodriguez/pry-byebug', branch: 'master'
+  gem 'pry-coolline'
+end
+
+group :development do
+  # gem 'rack-insight'
+  # MODEL
+  gem 'annotate'
+  # CAPISTRANO
+  # =====================================
+  gem 'capistrano', '~> 3.3.4'
+  # gem 'capistrano-rbenv', require: false
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
+  gem 'capistrano-rvm',   '~> 0.1', require: false
+  gem 'capistrano-rails',   '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-passenger', require: false
+  gem 'capistrano3-nginx', '~> 2.0'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano-bower'
+  # ======================================
+
+
+  gem 'bullet'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+
+  # find and manage missing and unused translations.
+  # gem 'i18n-tasks'
+  gem 'quiet_assets'
+  # For preview email in the browser
+  # gem 'letter_opener'
+  # For livereload
+  gem 'guard-livereload', require: false
+end
+
+group :test do
+  gem 'email_spec'
+  gem 'database_cleaner'
+  gem 'poltergeist'
+  gem 'selenium-webdriver'
+  gem 'capybara'
+end
